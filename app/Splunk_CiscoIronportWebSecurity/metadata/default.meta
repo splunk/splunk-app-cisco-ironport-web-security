@@ -1,0 +1,74 @@
+
+# Application-level permissions
+
+[]
+access = read : [ * ], write : [ admin, power ]
+
+### EVENT TYPES
+
+[eventtypes]
+export = system
+
+
+### PROPS
+
+[props]
+export = system
+
+
+### TRANSFORMS
+
+[transforms]
+export = system
+
+[savedsearches]
+export = none
+
+[lookups]
+export = system
+
+
+### SAVED SEARCHES
+
+[savedsearches/Cisco%20WSA%20-%20Security%20-%20DataCube]
+access = read : [ * ], write : [ admin ]
+export = system
+
+
+[savedsearches/Cisco%20WSA%20-%20Events%20over%20time%20by%20Usage]
+access = read : [ * ], write : [ admin ]
+export = system
+
+[savedsearches/Cisco%20WSA%20-%20Top%20Categories]
+access = read : [ * ], write : [ admin ]
+export = system
+
+[Ciscosavedsearches/%20WSA%20-%20Top%20Clients]
+access = read : [ * ], write : [ admin ]
+export = system
+
+[savedsearches/Cisco%20WSA%20-%20Top%20Websites]
+access = read : [ * ], write : [ admin ]
+export = system
+
+
+
+
+### Views
+[views/wsa_overview]
+access = read : [ * ], write : [ admin ]
+export = system
+
+[views/client_profiler]
+access = read : [ * ], write : [ admin ]
+export = system
+
+
+[views/client_overview]
+access = read : [ * ], write : [ admin ]
+export = system
+
+[views/web_security_threats]
+access = read : [ * ], write : [ admin ]
+export = system
+

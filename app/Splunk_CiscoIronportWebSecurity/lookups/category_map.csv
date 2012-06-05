@@ -1,0 +1,187 @@
+x_webcat_code_abbr,x_webcat_code_full,usage,severity
+-,URL Filtering Bypassed,Unknown,3-Warning
+adlt,Adult,Personal,4-Information
+Adul,Adult/Sexually Explicit,Violation,4-Information
+adv,Advertisements,Personal,4-Information
+Adve,Advertisements & Popups,Personal,4-Information
+Alco,Alcohol & Tobacco,Violation,5-None
+art,Arts and Entertainment,Personal,5-None
+Arts,Arts,Personal,5-None
+at,Alcohol and Tobacco,Violation,5-None
+Blog,Blogs & Forums,Personal,3-Warning
+Busi,Business,Business,5-None
+busi,Business and Industry,Business,5-None
+cell,Mobile Phones,Personal,4-Information
+Chat,Chat,Borderline,3-Warning
+chat,Web-based Chat,Borderline,3-Warning
+comm,Online Communities,Personal,3-Warning
+comp,Computers and Internet,Business,5-None
+Comp,Computing & Internet,Business,5-None
+cprn,Child Porn,Personal,4-Information
+Crim,Criminal Activity,Personal,4-Information
+csec,Computer Security,Personal,2-Critical
+cult,Cults,Violation,4-Information
+date,Dating,Violation,4-Information
+Down,Downloads,Personal,3-Warning
+drug,Illegal Drugs,Violation,4-Information
+edu,Education,Personal,5-None
+Educ,Education,Personal,5-None
+Ente,Entertainment,Personal,5-None
+err,URL Filtering Bypassed,Unknown,3-Warning
+Fash,Fashion & Beauty,Personal,5-None
+filt,Filter Avoidance,Unknown,3-Warning
+Fina,Finance & Investment,Borderline,4-Information
+fnnc,Finance,Borderline,4-Information
+food,Dining and Drinking,Personal,5-None
+Food,Food & Dining,Personal,5-None
+free,Freeware and Shareware,Personal,3-Warning
+fts,File Transfer Services,Personal,3-Warning
+Gamb,Gambling,Violation,4-Information
+gamb,Gambling,Violation,4-Information
+Game,Games,Personal,4-Information
+game,Games,Personal,4-Information
+gov,Government and Law,Personal,5-None
+Gove,Government,Personal,5-None
+Hack,Hacking,Violation,2-Critical
+hack,Hacking,Violation,2-Critical
+hate,Hate Speech,Violation,4-Information
+Heal,Health & Medicine,Personal,5-None
+heal,Spiritual Healing,Personal,5-None
+hlth,Health and Nutrition,Personal,5-None
+Hobb,Hobbies & Recreation,Personal,5-None
+Host,Hosting Sites,Personal,3-Warning
+ilac,Illegal Activities,Violation,4-Information
+Ille,Illegal Drugs,Violation,4-Information
+im,Instant Messaging,Borderline,3-Warning
+imp,Impossible,Unknown,3-Warning
+Infr,Infrastructure,Unknown,5-None
+infr,Infrastructure,Unknown,5-None
+Inti,Intimate Apparel & Swimwear,Personal,4-Information
+Into,Intolerance & Hate,Personal,4-Information
+IW_adlt,Adult,Violation,4-Information
+IW_adv,Advertisements,Personal,4-Information
+IW_art,Arts and Entertainment,Personal,5-None
+IW_at,Alcohol and Tobacco,Violation,5-None
+IW_busi,Business and Industry,Business,5-None
+IW_cell,Mobile Phones,Personal,4-Information
+IW_chat,Web-based Chat,Borderline,3-Warning
+IW_comm,Online Communities,Personal,3-Warning
+IW_comp,Computers and Internet,Business,5-None
+IW_cprn,Child Porn,Violation,4-Information
+IW_csec,Computer Security,Personal,2-Critical
+IW_cult,Cults,Violation,4-Information
+IW_date,Dating,Violation,4-Information
+IW_drug,Illegal Drugs,Violation,4-Information
+IW_edu,Education,Personal,5-None
+IW_filt,Filter Avoidance,Unknown,3-Warning
+IW_fnnc,Finance,Borderline,4-Information
+IW_food,Dining and Drinking,Personal,5-None
+IW_free,Freeware and Shareware,Personal,3-Warning
+IW_fts,File Transfer Services,Personal,3-Warning
+IW_gamb,Gambling,Violation,4-Information
+IW_game,Games,Personal,4-Information
+IW_gov,Government and Law,Personal,5-None
+IW_hack,Hacking,Violation,2-Critical
+IW_hate,Hate Speech,Violation,4-Information
+IW_heal,Spiritual Healing,Personal,5-None
+IW_hlth,Health and Nutrition,Personal,5-None
+IW_ilac,Illegal Activities,Violation,4-Information
+IW_im,Instant Messaging,Borderline,3-Warning
+IW_infr,Infrastructure,Unknown,5-None
+IW_job,Job Search,Personal,3-Warning
+IW_kids,Safe for Kids,Personal,5-None
+IW_ling,Lingerie and Swimsuits,Personal,4-Information
+IW_lotr,Lottery and Sweepstakes,Personal,4-Information
+IW_mail,Web-based Email,Borderline,3-Warning
+IW_mdia,Streaming Media,Personal,5-None
+IW_natr,Nature,Personal,5-None
+IW_news,News,Personal,5-None
+IW_nsn,Non-sexual Nudity,Personal,5-None
+IW_obs,Tasteless or Obscene,Personal,4-Information
+IW_osb,Online Storage and Backup,Personal,2-Critical
+IW_p2p,Peer File Transfer,Personal,2-Critical
+IW_para,Paranormal and Occult,Personal,4-Information
+IW_plag,Cheating and Plagiarism,Personal,5-None
+IW_porn,Porn,Violation,4-Information
+IW_ref,Reference,Business,5-None
+IW_rest,Real Estate,Personal,5-None
+IW_sci,Science and Technology,Business,5-None
+IW_scty,Society and Culture,Personal,5-None
+IW_shop,Shopping,Personal,5-None
+IW_snet,Social Networking,Personal,3-Warning
+IW_socs,Social Science,Personal,5-None
+IW_sprt,Sports and Recreation,Personal,5-None
+IW_srch,Search Engines and Portals,Borderline,5-None
+IW_swup,Software Updates,Borderline,3-Warning
+IW_sxed,Sex Ed and Abortion,Personal,5-None
+IW_tat,Tattoos,Personal,5-None
+IW_trad,Online Trading,Personal,5-None
+IW_tran,Web Page Translation,Personal,2-Critical
+IW_trns,Transportation,Personal,5-None
+IW_trvl,Travel,Borderline,5-None
+IW_viol,Violence,Personal,4-Information
+IW_voip,Internet Telephony,Personal,3-Warning
+IW_weap,Weapons,Personal,4-Information
+IW_whst,Web Hosting,Personal,3-Warning
+job,Job Search,Personal,3-Warning
+Job,Job Search & Career Development,Personal,3-Warning
+Kids,Kids Sites,Personal,5-None
+kids,Safe for Kids,Personal,5-None
+ling,Lingerie and Swimsuits,Personal,4-Information
+lotr,Lottery and Sweepstakes,Personal,4-Information
+mail,Web-based Email,Borderline,3-Warning
+mdia,Streaming Media,Personal,5-None
+Moto,Motor Vehicles,Personal,5-None
+natr,Nature,Personal,5-None
+nc,Uncategorized URLs,Unknown,3-Warning
+News,News,Personal,5-None
+news,News,Personal,5-None
+nsn,Non-sexual Nudity,Personal,5-None
+obs,Tasteless or Obscene,Personal,4-Information
+osb,Online Storage and Backup,Personal,2-Critical
+p2p,Peer File Transfer,Personal,2-Critical
+para,Paranormal and Occult,Personal,4-Information
+Peer,Peer-to-Peer,Personal,2-Critical
+Pers,Personals & Dating,Personal,4-Information
+Phil,Philanthropic & Professional Orgs.,Personal,5-None
+Phot,Photo Searches,Personal,5-None
+plag,Cheating and Plagiarism,Personal,5-None
+Poli,Politics,Personal,5-None
+porn,Porn,Personal,4-Information
+Prox,Proxies & Translators,Personal,2-Critical
+Real,Real Estate,Personal,5-None
+ref,Reference,Business,5-None
+Refe,Reference,Business,5-None
+Reli,Religion,Personal,5-None
+rest,Real Estate,Personal,5-None
+Ring,Ringtones/Mobile Phone Downloads,Personal,4-Information
+sci,Science and Technology,Business,5-None
+scty,Society and Culture,Personal,5-None
+Sear,Search Engines,Borderline,5-None
+Sex,Sex Education,Personal,5-None
+Shop,Shopping,Personal,5-None
+shop,Shopping,Personal,5-None
+snet,Social Networking,Personal,3-Warning
+Soci,Society & Culture,Personal,5-None
+socs,Social Science,Personal,5-None
+Spor,Sports,Personal,5-None
+sprt,Sports and Recreation,Personal,5-None
+srch,Search Engines and Portals,Borderline,5-None
+Stre,Streaming Media,Personal,5-None
+Susp,Suspect/Threat URLs,Personal,1-Emergency
+swup,Software Updates,Borderline,3-Warning
+sxed,Sex Ed and Abortion,Personal,5-None
+Tast,Tasteless & Offensive,Personal,4-Information
+tat,Tattoos,Personal,5-None
+trad,Online Trading,Personal,5-None
+tran,Web Page Translation,Personal,2-Critical
+Trav,Travel,Borderline,5-None
+trns,Transportation,Personal,5-None
+trvl,Travel,Borderline,5-None
+Viol,Violence,Violation,4-Information
+viol,Violence,Violation,4-Information
+voip,Internet Telephony,Personal,3-Warning
+Weap,Weapons,Personal,4-Information
+weap,Weapons,Personal,4-Information
+Web-,Web-based E-mail,Borderline,3-Warning
+whst,Web Hosting,Personal,3-Warning

@@ -1,0 +1,109 @@
+Copyright (C) 2005-2012 Splunk Inc. All Rights Reserved.
+
+Add-on:             Splunk for Cisco IronPort Web Security Appliance (WSA)
+Current Version:    2.0
+Last Modified:	    2012-04-01
+Splunk Version:	    4.3 and higher
+Author:             Splunk and Cisco, Inc (Tim Davidson, tidavids@cisco.com)
+
+The Splunk for Cisco WSA add-on allows you to consume, analyze, and report on Cisco Ironport Web data. This add-on is designed to work with the Splunk Cisco Security Suite; install these together to access reports and dashboards that give you visual insight into your Cisco WSA data.
+
+##### What's New #####
+2.0 (2012-04-01)
+- Major updaate to the app.
+- Completely change the look and feel of the app.
+- Refactor the code base.
+
+1.0.0 (02.28.11, build 96658)
+- Updated to provide compatibility with Splunk 4.2
+- Updated to include a setup application
+
+##### Technology Add-on Details ######
+
+Sourcetype(s):             cisco_wsa_squid, cisco_wsa_w3c
+Supported Technologies:    Cisco IronPort Web Security Appliance (WSA)	
+Compatible Solutions:      Cisco Security Suite
+Has Index-time Operations: Yes (needs to be deployed on indexers)
+
+###### Installation Instructions ######
+
++++ Manual Configuration (if you cannot use interactive setup) +++
+
+Optionally, you can disable the saved searches that are used for reporting via the configuration files themselves. Follow the steps to disable the saved searches manually. Note that the steps below perform the same action that is performed by the setup app.
+
+1. Open or create the savedsearches.conf file located at $SPLUNK_HOME/etc/apps/Splunk_CiscoIronportWebSecurity/local/savedsearches.conf
+2. Modify the local savedsearches.conf file to include the following stanzas:
+
+	[Cisco WSA - Security - DataCube]
+	enableSched = 0
+	
+	[Cisco WSA - Acceptable Use - DataCube]
+	enableSched = 0
+	
+	[Cisco WSA - Network Resources - DataCube]
+	enableSched = 0
+
+3. Save the changes made to the savedsearches.conf file.
+4. Restart Splunk for the changes to take effect. 
+
++++ Configuring the Data Input +++
+
+Configure your IronPort Web Security Appliance to schedule an export of the access logs to a directory accessible by the Splunk Server in either the squid or w3c format. The recommended interval for this is 15 minutes. Please note that the squid logging option provides a fixed format and the app includes field extractions for this. For the w3c format you will need to supply the field header in order for the app to function (see below for details). Generally, it is best to use the Squid format since it reduces the number of steps require to configure the WSA app.
+
+Once you have configured the IronPort device, create a new data input in Splunk to import the data from your WSA device. Define the sourcetype in the data input according to format that the WSA device is configured to create; either "cisco_wsa_squid" for Squid format or "cisco_wsa_w3c" for W3C format.
+
++++ Configuring Cisco WSA to work with existing data +++
+
+If you already have WSA data in Splunk then you will need to perform an additional step in order to get WSA to recognize the data for the other sourcetype. You can facilitate this by renaming your existing sourcetype to cisco_wsa_squid or cisco_wsa_w3c. To do so, edit props.conf (or create it if it does not exist) under $SPLUNK_HOME/etc/apps/Splunk_CiscoIronportWebSecurity/local and add the following, replacing the name of the staza with your sourcetype:
+
+
+	[put_ironport_web_squid_sourcetype_here]
+	rename = cisco_wsa_squid #or cisco_wsa_w3c if it applies
+
+
++++ Extracting Fields from W3C Logs (not applicable to the Squid format) +++
+
+If your IronPort Web access logs are in a w3c format you will need to create a DELIMS based extraction for this log format in order for WSA to know which fields the values map to. The fields value for this extraction will be set to the fields listed in the header of your w3c logs. The field names must match up with the order in which the fields were selected in the management interface. Alternatively, you can determine the field values by vieiwing the top of the w3c formatted log file.
+
+To create the field extraction, add the following entry to props.conf under the local directory of this app ($SPLUNK_HOME/etc/apps/Splunk_CiscoIronportWebSecurity/local) that looks something like this:
+
+	[ironport-w3c]
+	DELIMS = " "
+	FIELDS = "time", "c_ip","field3",...,"field30"
+
+Be sure to list all of the fields included in the log. Below is the list of required fields:
+
+	# cs_username
+	# c_ip
+	# x_webcat_code_abbr
+	# x_webroot_threat_name
+	# x_wbrs_score
+	# sc_bytes
+	# cs_url
+	# s_hostname
+	# x_acltag 
+
+###### Troubleshooting the add-on ######
+
+If you do not see the Cisco WSA data or if the data is not being processed accordingly then the data is most likely sourcetyped incorrectly. You should be able to perform a search for sourcetype=cisco_esa in order to find all of the WSA data. If you have WSA data with a different sourcetype, then you will need to configure the add-on to recognize this data; see "Configuring Cisco WSA to work with existing data" above for details.
+
+###### Getting Help ######
+
+Additional information regarding the installation and configuration of the Cisco WSA app can be found here:
+
+	http://splunk-base.splunk.com/answers/3362/how-do-i-install-and-configure-the-splunk-for-ironport-web-app-on-splunkbase
+
+See the Splunk answers to view existing questions and answers regarding the Cisco WSA app or to ask a question yourself:
+
+	http://splunk-base.splunk.com/search/?q=cisco+wsa&Submit=search
+
+Alternatively, you can contact Splunk technical support if you need assistance: support@splunk.com
+
+###### More Information ######
+
+Below is a list of links for more information:
+
+  * Splunk add-on overview: http://splunk-base.splunk.com/apps/22302/splunk-for-cisco-ironport-web-security-appliance
+  * Questions and answers (Cisco WSA app specific): http://splunk-base.splunk.com/search/?q=cisco+wsa&Submit=search
+  * Questions and answers (General Splunk): http://splunk-base.splunk.com/answers/
+  * General support: http://www.splunk.com/support
