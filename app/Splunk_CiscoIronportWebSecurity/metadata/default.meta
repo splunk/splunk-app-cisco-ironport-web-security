@@ -10,6 +10,13 @@ access = read : [ * ], write : [ admin, power ]
 export = system
 
 
+### TAGS
+
+[tags]
+export = system
+
+
+
 ### PROPS
 
 [props]
@@ -27,6 +34,8 @@ export = none
 [lookups]
 export = system
 
+[lookup]
+export = system
 
 ### SAVED SEARCHES
 

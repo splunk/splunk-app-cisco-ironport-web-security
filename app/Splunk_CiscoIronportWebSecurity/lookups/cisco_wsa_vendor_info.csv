@@ -1,0 +1,5 @@
+sourcetype,app,ids_type,vendor,product
+cisco_wsa,,network,Cisco,WSA
+cisco_wsa_squid,,network,Cisco,WSA
+cisco_wsa_w3c,,network,Cisco,WSA
+cisco_wsa_l4tm,,network,Cisco,WSA
