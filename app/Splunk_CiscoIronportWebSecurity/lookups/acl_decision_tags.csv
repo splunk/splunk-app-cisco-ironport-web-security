@@ -1,0 +1,53 @@
+acl_decision_tag,action,cause,threat_reason,description
+ALLOW_ADMIN_ERROR_PAGE,allow,notification,-,The Web Proxy allowed the transaction to an IronPort notification page and to any logo used on that page.
+ALLOW_CUSTOMCAT,allow,policy,-,The Web Proxy allowed the transaction based on custom URL category filtering settings for the Access Policy group.
+ALLOW_WBRS,allow,reputation,-,The Web Proxy allowed the transaction based on the Web Reputation filter settings for the Access Policy group.
+BLOCK_ADMIN,block,policy,acceptable use,The Web Proxy blocked the transaction based on some default settings for the Access Policy group.
+BLOCK_ADMIN_CONNECT,block,policy,tunneling,The Web Proxy blocked the transaction based on the TCP port of the destination as defined in the HTTP CONNECT Ports setting for the Access Policy group.
+BLOCK_ADMIN_CUSTOM_USER_AGENT,block,policy,acceptable use,The Web Proxy blocked the transaction based on the user agent as defined in the Block Custom User Agents setting for the Access Policy group.
+BLOCK_ADMIN_IDS,block,policy,acceptable use,The Web Proxy blocked the transaction based on the MIME type of the request body content as defined in the Data Security Policy group.
+BLOCK_ADMIN_FILE_TYPE,block,policy,acceptable use,The Web Proxy blocked the transaction based on the file type as defined in the Access Policy group.
+BLOCK_ADMIN_PROTOCOL,block,policy,acceptable use,The Web Proxy blocked the transaction based on the protocol as defined in the Block Protocols setting for the Access Policy group.
+BLOCK_ADMIN_SIZE,block,policy,acceptable use,The Web Proxy blocked the transaction based on the size of the response as defined in the Object Size settings for the Access Policy group.
+BLOCK_ADMIN_SIZE_IDS,block,policy,acceptable use,The Web Proxy blocked the transaction based on the size of the request body content as defined in the Data Security Policy group.
+BLOCK_AMW_REQ,block,anti-malware,malware,The Web Proxy blocked the request based on the Anti-Malware settings for the Outbound Malware Scanning Policy group. The request body produced a positive malware verdict.
+BLOCK_AMW_RESP,block,anti-malware,malware,The Web Proxy blocked the response based on the Anti-Malware settings for the Access Policy group.
+BLOCK_AMW_REQ_URL,block,anti-malware,malware,"The Web Proxy suspects the URL in the HTTP request might not be safe, so it blocked the transaction at request time based on the Anti-Malware settings for the Access Policy group."
+BLOCK_AVC,block,avc,acceptable use,The Web Proxy blocked the transaction based on the configured Application settings for the Access Policy group.
+BLOCK_CONTENT_UNSAFE,block,policy,acceptable use,The Web Proxy blocked the transaction based on the site content ratings settings for the Access Policy group. The client request was for adult content and the policy is configured to block adult content.
+BLOCK_CONTINUE_CONTENT_UNSAFE,warn,policy,acceptable use,The Web Proxy blocked the transaction and displayed the Warn and Continue page based on the site content ratings settings in the Access Policy group. The client request was for adult content and the policy is configured to give a warning to users accessing adult content.
+BLOCK_CONTINUE_CUSTOMCAT,warn,policy,acceptable use,The Web Proxy blocked the transaction and displayed the Warn and Continue page based on a custom URL category in the Access Policy group configured to „Warn.‡
+BLOCK_CONTINUE_WEBCAT,warn,policy,acceptable use,The Web Proxy blocked the transaction and displayed the Warn and Continue page based on a predefined URL category in the Access Policy group configured to „Warn.‡
+BLOCK_CUSTOMCAT,block,policy,acceptable use,The Web Proxy blocked the transaction based on custom URL category filtering settings for the Access Policy group.
+BLOCK_ICAP,block,dlp,DLP violation,The Web Proxy blocked the request based on the verdict of the external DLP system as defined in the External DLP Policy group.
+BLOCK_SEARCH_UNSAFE,block,policy,acceptable use,"The client request included an unsafe search query and the Access Policy is configured to enforce safe searches, so the original client request was blocked."
+BLOCK_SUSPECT_USER_AGENT,block,policy,suspect user agent,The Web Proxy blocked the transaction based on the Suspect User Agent setting for the Access Policy group.
+BLOCK_UNSUPPORTED_SEARCH_APP,block,policy,acceptable use,"The Web Proxy blocked the transaction based on the safe search settings for the Access Policy group. The transaction was for an unsupported search engine, and the policy is configured to block unsupported search engines."
+BLOCK_WBRS,block,reputation,acceptable use,The Web Proxy blocked the transaction based on the Web Reputation filter settings for the Access Policy group.
+BLOCK_WBRS_IDS,block,dlp,acceptable use,The Web Proxy blocked the upload request based on the Web Reputation filter settings for the Data Security Policy group.
+BLOCK_WEBCAT,block,policy,acceptable use,The Web Proxy blocked the transaction based on URL category filtering settings for the Access Policy group.
+BLOCK_WEBCAT_IDS,block,dlp,acceptable use,The Web Proxy blocked the upload request based on the URL category filtering settings for the Data Security Policy group.
+DECRYPT_ADMIN,decrypt,policy,acceptable use,The Web Proxy decrypted the transaction based on some default settings for the Decryption Policy group.
+DECRYPT_WEBCAT,decrypt,policy,acceptable use,The Web Proxy decrypted the transaction based on URL category filtering settings for the Decryption Policy group.
+DECRYPT_WBRS,decrypt,reputation,acceptable use,The Web Proxy decrypted the transaction based on the Web Reputation filter settings for the Decryption Policy group.
+DEFAULT_CASE,allow,policy,-,"The Web Proxy allowed the client to access the server because none of the AsyncOS services, such as Web Reputation or anti-malware scanning, took any action on the transaction."
+DROP_ADMIN,block,policy,acceptable use,The Web Proxy dropped the transaction based on some default settings for the Decryption Policy group.
+DROP_WEBCAT,block,policy,acceptable use,The Web Proxy dropped the transaction based on URL category filtering settings for the Decryption Policy group.
+DROP_WBRS,block,reputation,acceptable use,The Web Proxy dropped the transaction based on the Web Reputation filter settings for the Decryption Policy group.
+ONITOR_AMW_RESP,monitor,anti-malware,malware,The Web Proxy monitored the server response based on the Anti-Malware settings for the Access Policy group.
+ONITOR_AMW_RESP_URL,monitor,anti-malware,malware,"The Web Proxy suspects the URL in the HTTP request might not be safe, but it monitored the transaction based on the Anti-Malware settings for the Access Policy group."
+ONITOR_AVC,monitor,avc,acceptable use,The Web Proxy monitored the transaction based on the Application settings for the Access Policy group.
+ONITOR_CONTINUE_CONTENT_UNSAFE,warn,policy,acceptable use,"Originally, the Web Proxy blocked the transaction and displayed the Warn and Continue page based on the site content ratings settings in the Access Policy group. The client request was for adult content and the policy is configured to give a warning to users accessing adult content. The user accepted the warning and continued to the originally requested site, and no other scanning engine subsequently blocked the request."
+ONITOR_CONTINUE_CUSTOMCAT,warn,policy,acceptable use,"Originally, the Web Proxy blocked the transaction and displayed the Warn and Continue page based on a custom URL category in the Access Policy group configured to „Warn.‡ The user accepted the warning and continued to the originally requested site, and no other scanning engine subsequently blocked the request."
+ONITOR_CONTINUE_WEBCAT,warn,policy,acceptable use,"Originally, the Web Proxy blocked the transaction and displayed the Warn and Continue page based on a predefined URL category in the Access Policy group configured to „Warn.‡ The user accepted the warning and continued to the originally requested site, and no other scanning engine subsequently blocked the request."
+ONITOR_IDS,monitor,dlp,acceptable use,"The Web Proxy scanned the upload request using either a Data Security Policy or an External DLP Policy, but did not block the request. It evaluated the request against the Access Policies."
+ONITOR_SUSPECT_USER_AGENT,monitor,policy,suspect user agent,The Web Proxy monitored the transaction based on the Suspect User Agent setting for the Access Policy group.
+ONITOR_WBRS,monitor,reputation,acceptable use,The Web Proxy monitored the transaction based on the Web Reputation filter settings for the Access Policy group.
+NO_AUTHORIZATION,block,auth,acceptable use,"The Web Proxy did not allow the user access to the SaaS application because the user was already authenticated against an authentication realm, but not against any authentication realm configured in the SaaS Application Authentication Policy."
+NO_PASSWORD,block,auth,acceptable use,The user failed authentication.
+PASSTHRU_ADMIN,passthru,policy,-,The Web Proxy passed through the transaction based on some default settings for the Decryption Policy group.
+PASSTHRU_WEBCAT,passthru,policy,-,The Web Proxy passed through the transaction based on URL category filtering settings for the Decryption Policy group.
+PASSTHRU_WBRS,passthru,reputation,-,The Web Proxy passed through the transaction based on the Web Reputation filter settings for the Decryption Policy group.
+REDIRECT_CUSTOMCAT,redirect,policy,acceptable use,The Web Proxy redirected the transaction to a different URL based on a custom URL category in the Access Policy group configured to „Redirect.‡
+SAAS_AUTH,allow,saas,acceptable use,The Web Proxy allowed the user access to the SaaS application because the user was authenticated transparently against the authentication realm configured in the SaaS Application Authentication Policy.
+OTHER,error,-,-,"The Web Proxy did not complete the request due to an error, such as an authorization failure, server disconnect, or an abort from the client."
