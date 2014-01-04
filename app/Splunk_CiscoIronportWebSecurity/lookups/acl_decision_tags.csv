@@ -50,4 +50,4 @@ PASSTHRU_WEBCAT,passthru,policy,-,The Web Proxy passed through the transaction b
 PASSTHRU_WBRS,passthru,reputation,-,The Web Proxy passed through the transaction based on the Web Reputation filter settings for the Decryption Policy group.
 REDIRECT_CUSTOMCAT,redirect,policy,acceptable use,The Web Proxy redirected the transaction to a different URL based on a custom URL category in the Access Policy group configured to „Redirect.‡
 SAAS_AUTH,allow,saas,acceptable use,The Web Proxy allowed the user access to the SaaS application because the user was authenticated transparently against the authentication realm configured in the SaaS Application Authentication Policy.
-OTHER,error,-,-,"The Web Proxy did not complete the request due to an error, such as an authorization failure, server disconnect, or an abort from the client."
+OTHER,error,error,error,"The Web Proxy did not complete the request due to an error, such as an authorization failure, server disconnect, or an abort from the client."
