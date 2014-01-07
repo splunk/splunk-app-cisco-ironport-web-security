@@ -1,5 +1,5 @@
 sc_result,cache,description
-TCP_HIT,hist,The object requested was fetched from the disk cache.
+TCP_HIT,hit,The object requested was fetched from the disk cache.
 TCP_IMS_HIT,hit,The client sent an IMS (If-Modified-Since) request for an object and the object was found in the cache. The proxy responds with a 304 response.
 TCP_MEM_HIT,hit,The object requested was fetched from the memory cache.
 TCP_MISS,miss,"The object was not found in the cache, so it was fetched from the origin server."
