@@ -1,0 +1,9 @@
+sc_result,cache,description
+TCP_HIT,hit,The object requested was fetched from the disk cache.
+TCP_IMS_HIT,hit,The client sent an IMS (If-Modified-Since) request for an object and the object was found in the cache. The proxy responds with a 304 response.
+TCP_MEM_HIT,hit,The object requested was fetched from the memory cache.
+TCP_MISS,miss,"The object was not found in the cache, so it was fetched from the origin server."
+TCP_REFRESH_HIT,hit,"The object was in the cache, but had expired. The proxy sent an IMS (If-Modified-Since) request to the origin server, and the server confirmed that the object has not been modified. Therefore, the appliance fetched the object from either the disk or memory cache."
+TCP_CLIENT_REFRESH_MISS,miss,"The client sent a “don’t fetch response from cache” request by issuing the ‘Pragma: no-cache’ header. Due to this header from the client, the appliance fetched the object from the origin server."
+TCP_DENIED,-,The client request was denied due to Access Policies.
+NONE,-,"There was an error in the transaction. For example, a DNS failure or gateway timeout."
