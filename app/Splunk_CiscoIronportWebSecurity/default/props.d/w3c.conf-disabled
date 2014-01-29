@@ -1,0 +1,22 @@
+#
+# Need to convert this one to the W3C standard for Splunk 6 - disabled until then
+#
+[cisco_wsa_w3c]
+KV_MODE = none
+MAX_TIMESTAMP_LOOKAHEAD = 19
+#REPORT-extract = ironport-w3c
+#REPORT-x_webroot_threat_name_as_signature = x_webroot_threat_name_as_signature
+#REPORT-x_mcafee_virus_name_as_signature = x_mcafee_virus_name_as_signature
+#LOOKUP-table = cat_lookup x_webcat_code_abbr
+LOOKUP-vendor_info_for_cisco_wsa = cisco_wsa_vendor_info_lookup sourcetype OUTPUT vendor,product,ids_type
+# The aliases below assume that user has setup a fields delim statement that extracts fields according to the W3C 
+# format (http://www.w3.org/TR/WD-logfile.html)
+FIELDALIAS-url = cs_url AS url
+FIELDALIAS-http_method = cs_method AS http_method
+FIELDALIAS-user = cs_username AS user
+FIELDALIAS-http_content_type = cs_mime_type AS http_content_type
+FIELDALIAS-dest = s_hostname AS dest
+FIELDALIAS-src = c_ip AS src
+FIELDALIAS-status = sc_http_status AS status
+FIELDALIAS-action = sc_result_code AS action
+FIELDALIAS-bytes_in = sc_bytes AS bytes_in
